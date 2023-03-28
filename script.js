@@ -1,29 +1,29 @@
-const backgroundEl = document.querySelector('.container-counter');
-const numberEl = document.querySelector('.counter_number');
+const backgroundEl = document.querySelector('.container');
+const numberEl = document.querySelector('.number');
 const btnsEl = document.querySelectorAll('.counter_btn');
-let valueNum = numberEl.value;
-console.log(valueNum);
+let valueNum = +numberEl.textContent;
+let count = 0;
 
 btnsEl.forEach((btn) => {
   btn.addEventListener('click', () => {
     if (btn.classList.contains('up')) {
-      valueNum++;
-      numberEl.value = valueNum;
+      count++;
+      numberEl.textContent = count;
     }
-    if (numberEl.value > 0) {
+    if (+numberEl.textContent > 0) {
       numberEl.style.color = 'lightgreen';
-      backgroundEl.style.boxShadow = '1px 1px 100px lightgreen';
+      backgroundEl.style.boxShadow = '1px 1px 80px 40px lightgreen';
     }
 
     if (btn.classList.contains('down')) {
-      valueNum--;
-      numberEl.value = valueNum;
+      count--;
+      numberEl.textContent = count;
     }
-    if (numberEl.value < 0) {
+    if (+numberEl.textContent < 0) {
       numberEl.style.color = 'red';
-      backgroundEl.style.boxShadow = '1px 1px 100px red';
+      backgroundEl.style.boxShadow = '1px 1px 80px 40px red';
     }
-    if (numberEl.value == 0) {
+    if (+numberEl.textContent == 0) {
       numberEl.removeAttribute('style');
       backgroundEl.removeAttribute('style');
     }
