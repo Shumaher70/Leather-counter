@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('https://phonoteka.org/uploads/posts/2021-10/1633100363_17-phonoteka-org-p-fon-zelenaya-kozha-krasivo-19.jpg');
+  background-position: center;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container-counter {
+  background-image: initial;
+  background-position-x: 100px;
+  background-position-y: 100px;
+  background-size: contain;
+  box-shadow: 1px 1px 100px #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 700px;
+  transition: 0.3s;
+}
+
+.counter_title {
+  color: #fff;
+  font-size: 50px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.counter_number {
+  background: none;
+  text-align: center;
+  border: none;
+  font-size: 200px;
+
+  color: #fff;
+  font-weight: normal;
+}
+
+.counter_number:focus {
+  outline: none;
+}
+
+.counter_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #193549;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+
+.counter_btn.up:active {
+  background-color: green;
+  transform: scale(0.98);
+}
+.counter_btn.down:active {
+  background-color: red;
+  transform: scale(0.98);
+}
